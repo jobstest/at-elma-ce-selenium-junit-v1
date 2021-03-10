@@ -6,7 +6,7 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="at-elma-ce-selenium-junit-v1" />
+        <module name="at-elma-ce-selenium-junit" />
       </profile>
     </annotationProcessing>
   </component>

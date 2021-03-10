@@ -1,6 +1,7 @@
 package test;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
+import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -44,8 +45,8 @@ public class TestBase {
         test1 = PageFactory.initElements(driver, Test1.class);
     }
 
-    /*@AfterEach
+    @AfterEach
     public void finish(){
         driver.quit();
-    }*/
+    }
 }
