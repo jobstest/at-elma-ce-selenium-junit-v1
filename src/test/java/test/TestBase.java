@@ -5,6 +5,8 @@ import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.PageFactory;
 import page.AuthPageStep;
 import page.HomePageStep;
@@ -28,13 +30,13 @@ public class TestBase {
 
     @BeforeEach
     public void start(){
-        //WebDriverManager.firefoxdriver().setup();
+        WebDriverManager.firefoxdriver().setup();
         WebDriverManager.chromedriver().setup();
         //ChromeOptions options = new ChromeOptions();
         //options.setHeadless(true);
         //driver = new ChromeDriver(options);
-       driver = new ChromeDriver();
-        //driver = new FirefoxDriver();
+       //driver = new ChromeDriver();
+        driver = new FirefoxDriver();
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
         authPageStep = PageFactory.initElements(driver, AuthPageStep.class);
