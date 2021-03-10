@@ -31,7 +31,7 @@ public class TestBase {
     @BeforeEach
     public void start(){
         WebDriverManager.firefoxdriver().setup();
-        WebDriverManager.chromedriver().setup();
+        //WebDriverManager.chromedriver().setup();
         //ChromeOptions options = new ChromeOptions();
         //options.setHeadless(true);
         //driver = new ChromeDriver(options);
