@@ -32,9 +32,10 @@ public class TestBase {
     public void start(){
         //WebDriverManager.firefoxdriver().setup();
         WebDriverManager.chromedriver().setup();
-        //ChromeOptions options = new ChromeOptions();
+        ChromeOptions options = new ChromeOptions();
         //options.setHeadless(true);
-        //driver = new ChromeDriver(options);
+        options.addArguments("--headless", "window-size=1024,768", "--no-sandbox");
+        driver = new ChromeDriver(options);
         driver = new ChromeDriver();
         //driver = new FirefoxDriver();
         driver.manage().window().maximize();
