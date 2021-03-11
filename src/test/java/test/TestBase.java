@@ -30,13 +30,13 @@ public class TestBase {
 
     @BeforeEach
     public void start(){
-        WebDriverManager.firefoxdriver().setup();
-        //WebDriverManager.chromedriver().setup();
+        //WebDriverManager.firefoxdriver().setup();
+        WebDriverManager.chromedriver().setup();
         //ChromeOptions options = new ChromeOptions();
         //options.setHeadless(true);
         //driver = new ChromeDriver(options);
-       //driver = new ChromeDriver();
-        driver = new FirefoxDriver();
+        driver = new ChromeDriver();
+        //driver = new FirefoxDriver();
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
         authPageStep = PageFactory.initElements(driver, AuthPageStep.class);
