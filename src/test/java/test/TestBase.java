@@ -7,6 +7,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.support.PageFactory;
 import page.AuthPageStep;
 import page.HomePageStep;
@@ -30,14 +31,16 @@ public class TestBase {
 
     @BeforeEach
     public void start(){
-        //WebDriverManager.firefoxdriver().setup();
-        WebDriverManager.chromedriver().setup();
-        ChromeOptions options = new ChromeOptions();
+        WebDriverManager.firefoxdriver().setup();
+        //WebDriverManager.chromedriver().setup();
+        //ChromeOptions options = new ChromeOptions();
         //options.setHeadless(true);
-        options.addArguments("--headless", "window-size=1024,768", "--no-sandbox");
-        driver = new ChromeDriver(options);
-        driver = new ChromeDriver();
-        //driver = new FirefoxDriver();
+        //options.addArguments("--headless", "window-size=1024,768", "--no-sandbox");
+        //driver = new ChromeDriver(options);
+        //driver = new ChromeDriver();
+        FirefoxOptions ffoptions = new FirefoxOptions();
+        ffoptions.setHeadless(true);
+        driver = new FirefoxDriver(ffoptions);
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
         authPageStep = PageFactory.initElements(driver, AuthPageStep.class);
