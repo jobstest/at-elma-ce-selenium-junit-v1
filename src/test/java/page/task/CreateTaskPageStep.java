@@ -7,7 +7,7 @@ import page.BasePage;
 
 
 public class CreateTaskPageStep extends BasePage {
-    String CREATE_TASK_URL = "http://localhost:8000/Tasks/Task/Create";
+    String CREATE_TASK_URL = "http://supervovan:8000/Tasks/Task/Create";
 
     public CreateTaskPageStep(WebDriver driver) {
         super(driver);
