@@ -45,13 +45,13 @@ public class AuthPageTest extends TestBase {
                 .welcomeMessage();
     }
 
-    @Test
+    /*@Test
     public void createTask(){
         authPageStep.auth();
         homePageStep.clickBtnTask();
         homePageStep.clickBtnUser();
         //createTaskPageStep.clickBtnUser();
         selectUsersPopupStep.addUserSelectedItems();
-    }
+    }*/
 
 }

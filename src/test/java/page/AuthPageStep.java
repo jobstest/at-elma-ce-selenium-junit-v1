@@ -5,7 +5,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
 public class AuthPageStep extends BasePage{
-    String SITE_URL = "http://supervovan:8000/Security/Account/LogOn";
+    String SITE_URL = "http://supervovan:8000";
     public AuthPageStep(WebDriver driver) {
         super(driver);
     }
