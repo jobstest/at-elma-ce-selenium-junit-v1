@@ -38,10 +38,10 @@ public class TestBase {
         //options.addArguments("--headless", "window-size=1024,768", "--no-sandbox");
         //driver = new ChromeDriver(options);
         //driver = new ChromeDriver();
-        //FirefoxOptions ffoptions = new FirefoxOptions();
-        //ffoptions.setHeadless(true);
-        //driver = new FirefoxDriver(ffoptions);
-        driver = new FirefoxDriver();
+        FirefoxOptions ffoptions = new FirefoxOptions();
+        ffoptions.setHeadless(true);
+        driver = new FirefoxDriver(ffoptions);
+        //driver = new FirefoxDriver();
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
         authPageStep = PageFactory.initElements(driver, AuthPageStep.class);
