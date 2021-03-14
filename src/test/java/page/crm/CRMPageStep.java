@@ -11,7 +11,7 @@ import page.BasePage;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class CRMPageStep extends BasePage {
-    String CRM_URL = "http://supervovan:8000/CRM";
+    String CRM_URL = "http://192.168.56.1:8000/CRM";
     public CRMPageStep(WebDriver driver) {
         super(driver);
     }
