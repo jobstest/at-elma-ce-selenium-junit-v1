@@ -6,12 +6,9 @@ import org.junit.jupiter.api.Test;
 
 public class AuthPageTest extends TestBase {
 
-    @Epic("TESTING FOR http://supervovan:8000/Security/Account/LogOn tasks")
-    @Feature(value = "Tests authorization")
-    @Severity(SeverityLevel.MINOR)
-    @Story(value = "Sign in invalid login")
-    @Description("Sign in invalid login")
+
     @Test
+    @Description("Авторизация с неправильным логином")
     public void signInvalidLogin(){
         authPageStep.goTo()
                     .fillLogin("admin1")
@@ -19,11 +16,10 @@ public class AuthPageTest extends TestBase {
                     .clickBtnLogIn()
                     .errorMessage();
     }
-    @Epic("TESTING FOR http://supervovan:8000/Security/Account/LogOn tasks")
-    @Feature(value = "Tests authorization")
-    @Story(value = "Sign in invalid password")
-    @Description("Sign in invalid password")
+
+
     @Test
+    @Description("Авторизация с неправильным паролем")
     public void signInvalidPassword(){
         authPageStep.goTo()
                     .fillLogin("admin")
@@ -31,10 +27,8 @@ public class AuthPageTest extends TestBase {
                     .clickBtnLogIn()
                     .errorMessage();
     }
-    @Epic("TESTING FOR http://supervovan:8000/Security/Account/LogOn tasks")
-    @Feature(value = "Tests authorization")
-    @Story(value = "Sign in valid login and password")
-    @Description("Sign in valid login and password")
+
+    @Description("Авторизация через правильные логин и пароль")
     @Test
     public void authorization(){
         authPageStep.goTo()

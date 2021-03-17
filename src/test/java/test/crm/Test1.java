@@ -6,11 +6,11 @@ import test.TestBase;
 
 public class Test1 extends TestBase {
 
-    @Test
+    /*@Test
     @Description("Проверяем текст в в списке Тип объектов")
     public void test1(){
         authPageStep.auth();
         crmPageStep.goTo()
                 .textSelectTypeObject();
-    }
+    }*/
 }
