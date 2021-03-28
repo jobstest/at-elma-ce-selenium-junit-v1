@@ -27,7 +27,9 @@ public class TestBase {
     public CRMPageStep crmPageStep;
     public Test1 test1;
 
-
+    /**
+     * Основные настройки
+     */
 
     @BeforeEach
     public void start(){
@@ -54,6 +56,6 @@ public class TestBase {
 
     @AfterEach
     public void finish(){
-        driver.quit();
+        //driver.quit();
     }
 }

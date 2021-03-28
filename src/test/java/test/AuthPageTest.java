@@ -1,9 +1,10 @@
 package test;
 import io.qameta.allure.*;;
-import io.qameta.allure.SeverityLevel;
 import org.junit.jupiter.api.Test;
 
-
+/**
+ * Тесты на странице авторизации
+ */
 public class AuthPageTest extends TestBase {
 
 

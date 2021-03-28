@@ -7,6 +7,9 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import page.BasePage;
 
+/**
+ * Шаги в попапе "Укажите пользователей"
+ */
 public class SelectUsersPopupStep extends BasePage {
     public SelectUsersPopupStep(WebDriver driver) {
         super(driver);

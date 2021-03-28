@@ -5,32 +5,32 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
 public class AuthPageStep extends BasePage{
-    String SITE_URL = "http://supervovan:8000/Security/Account/LogOn";
+    String SITE_URL = "http://localhost:8000/Security/Account/LogOn";
     public AuthPageStep(WebDriver driver) {
         super(driver);
     }
 
-    @Step(value = "open url")
+    @Step(value = "открыть url")
     public AuthPageStep goTo(){
         driver.get(SITE_URL);
         return this;
     }
-    @Step(value = "Click button LogIn")
+    @Step(value = "Нажать на кнопку Войти в систему")
     public AuthPageStep clickBtnLogIn(){
         click(By.id("LogIn"));
         return this;
     }
-    @Step(value = "Fill in login with{0}")
+    @Step(value = "Заполнить поле Имя пользователя")
     public AuthPageStep fillLogin(String login){
         writeText(By.id("login"), login);
         return this;
     }
-    @Step(value = "Fill in password with{0}")
+    @Step(value = "Заполнить поле Пароль")
     public AuthPageStep fillPassword(String paswword){
         writeText(By.id("password"), paswword);
         return this;
     }
-    @Step(value = "Sign in was unsccesful")
+    @Step(value = "Сообщение - Неверное имя пользователя или пароль.")
     public AuthPageStep errorMessage(){
         isElementDisplayed(By.id("errorMessage"));
         return this;
